@@ -1,29 +1,36 @@
 // Business Logic
 // Pizza Constructor Blueprint
-function Pizza() {
-  // this.size = size;
+function Pizza(size) {
+  this.size = size;
   this.toppings = {};
-  this.totalPrice = 0;
 }
 
-Pizza.prototype.selectToppings = function () {
-  let toppings = $('input[type="checkbox"]:checked').map(function() {
+let pizza = new Pizza();
+
+Pizza.prototype.selectSize = function () {
+  let pizzaSize = $("input[name='size']:checked").val();
+  this.size = pizzaSize;
+
+};
+
+Pizza.prototype.selectToppings = function (element) {
+  element = $('input[type="checkbox"]:checked').map(function() {
     return $(this).val();
   })
-  console.log(toppings);
+  this.toppings = element;
 };
 
 
 
 // UI Logic
-let pizzaOrder = new Pizza();
 
 $(document).ready(function () {
   $("#pizza-form").submit(function (event) {
     event.preventDefault();
-    let toppingsSelection = pizzaOrder.selectToppings();
-    console.log(toppingsSelection);
+    pizza.selectSize();
+    pizza.selectToppings();
+    console.log(pizza);
 
-    $("#pizza-order").text(toppingsSelection);
+    // $("#pizza-order").html(pizza);
   });
 });
