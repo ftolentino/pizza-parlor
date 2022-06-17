@@ -50,13 +50,35 @@
                 </label>
               </div>
             </div>
+              <!-- Add Toppings -->
+              <div class="card py-4 px-4 my-4">
+                <div class="radio">
+                  <label>
+                    <input type="radio" name="topping" value="cheese" checked />
+                    Mozzarella Cheese + $1.00
+                  </label>
+                </div>
+                <hr />
+                <div class="radio">
+                  <label>
+                    <input type="radio" name="topping" value="pepperoni" />
+                    Pepperoni + $1.00
+                  </label>
+                </div>
+                <hr />
+                <div class="radio">
+                  <label>
+                    <input type="radio" name="topping" value="black-olives" />
+                    Black Olives + $1.00
+                  </label>
+                </div>
+            </div>
 
-            <button type="submit" class="btn-primary">Add</button>
+            <button type="submit" class="btn-primary">Add to Cart</button>
           </form>
           <hr />
           <h2>Pizza Order</h2>
           <ul id="pizza-order"></ul>
-        </div>
         <div class="col-md-6">
           <div id="show-order">
             <p>Size: <span class="pizza-size"></span></p>
