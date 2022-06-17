@@ -30,63 +30,57 @@
             <h3>Select Size</h3>
             <div class="card py-4 px-4 my-4">
               <div class="radio">
+                <input type="radio" name="size" value="small" checked />
                 <label>
-                  <input type="radio" name="size" value="small" checked />
-                  Small 10" $14.95
+                  Small 10" 
                 </label>
               </div>
               <hr />
               <div class="radio">
+                <input type="radio" name="size" value="medium" />
                 <label>
-                  <input type="radio" name="size" value="medium" />
-                  Medium 14" $18.95
+                  Medium 14" 
                 </label>
               </div>
               <hr />
               <div class="radio">
+                <input type="radio" name="size" value="large" />
                 <label>
-                  <input type="radio" name="size" value="large" />
-                  Large 18" $22.95
+                  Large 18" 
                 </label>
               </div>
             </div>
               <!-- Add Toppings -->
               <h3>Choose Toppings</h3>
               <div class="card py-4 px-4 my-4">
-                <div class="radio">
-                  <label>
-                    <input type="radio" name="topping" value="cheese" checked />
-                    Mozzarella Cheese + $1.00
+                <div class="input-group mb-3">
+                  <input type="checkbox" name="anchovies" value="anchovies"  />
+                  <label for="anchovies">
+                    Anchovies
                   </label>
                 </div>
                 <hr />
-                <div class="radio">
+                <div class="input-group mb-3">
+                  <input type="checkbox" name="pepperoni" value="pepperoni" />
                   <label>
-                    <input type="radio" name="topping" value="pepperoni" />
-                    Pepperoni + $1.00
+                    Pepperoni 
                   </label>
                 </div>
                 <hr />
-                <div class="radio">
+                <div class="input-group mb-3">
+                  <input type="checkbox" name="black-olives" value="black-olives" />
                   <label>
-                    <input type="radio" name="topping" value="black-olives" />
-                    Black Olives + $1.00
+                    Black Olives 
                   </label>
                 </div>
             </div>
 
-            <button type="submit" class="btn-primary">Add to Cart</button>
+            <button type="submit" class="btn-primary">Make Pizza</button>
           </form>
           <hr />
           <h2>Pizza Order</h2>
           <ul id="pizza-order"></ul>
-        <div class="col-md-6">
-          <div id="show-order">
-            <p>Size: <span class="pizza-size"></span></p>
-            <p>Toppings: <span class="pizza-toppings"></span></p>
-            <div id="buttons"></div>
-          </div>
-        </div>
+        
       </div>
     </div>
   </body>

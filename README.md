@@ -41,11 +41,11 @@ N/A
 ## Specs/TDD
 
 ```
-Description 
+Description Pizza() Constructor Object
 
-Test: 
-Code: 
-Expected Output: 
+Test: Return a Pizza object with two properties for toppings and size
+Code: const pizzaOrder = new Pizza(["pepperoni", "black olives"], "large");
+Expected Output: Pizza { toppings: ["pepperoni", "black olives"], size: "large" }
 
 
 
