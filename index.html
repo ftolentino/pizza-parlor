@@ -14,34 +14,41 @@
       crossorigin="anonymous"
     ></script>
     <script src="js/scripts.js"></script>
-    <title>Pig Dice Game</title>
+    <title>Pizza Parlor</title>
     <title></title>
   </head>
   <body>
     <div class="container">
-      <h1>Pizza Parlor</h1>
+      <div class="jumbotron">
+        <h1>Pizza Parlor</h1>
+      </div>
       <div class="row">
         <div class="col-md-6">
-          <hr />
           <h2>Create Pizza</h2>
-          <form id="new-contact">
-            <div class="radio">
-              <label>
-                <input type="radio" name="size" value="small" checked />
-                Small 10" $14.95
-              </label>
-            </div>
-            <div class="radio">
-              <label>
-                <input type="radio" name="size" value="medium" />
-                Medium 14" $18.95
-              </label>
-            </div>
-            <div class="radio">
-              <label>
-                <input type="radio" name="size" value="large" />
-                Large 18" $22.95
-              </label>
+          <form id="pizza-form">
+            <!-- Pizza Size -->
+            <h3>Select Size</h3>
+            <div class="card py-4 px-4 my-4">
+              <div class="radio">
+                <label>
+                  <input type="radio" name="size" value="small" checked />
+                  Small 10" $14.95
+                </label>
+              </div>
+              <hr />
+              <div class="radio">
+                <label>
+                  <input type="radio" name="size" value="medium" />
+                  Medium 14" $18.95
+                </label>
+              </div>
+              <hr />
+              <div class="radio">
+                <label>
+                  <input type="radio" name="size" value="large" />
+                  Large 18" $22.95
+                </label>
+              </div>
             </div>
 
             <button type="submit" class="btn-primary">Add</button>
