@@ -23,13 +23,25 @@ Pizza.prototype.selectToppings = function (element) {
 
 
 // UI Logic
+function displayPizzaOrder(pizzaOrder) {
+  // Object.keys(pizzaOrder).reduce((accum, currKey) => accum + 
+  // `<div>
+  //   <div>${currKey}</div>
+  //   <div>${pizzaOrder[currKey].toppings}</div>
+  // </div>`,'');
+  return pizzaOrder;
+}
+// const pizzaOrder = Object.keys(pizza).reduce((accum, currKey) => accum + 
+//   `<div
+//   `,'');
 
 $(document).ready(function () {
   $("#pizza-form").submit(function (event) {
     event.preventDefault();
     pizza.selectSize();
     pizza.selectToppings();
-    console.log(pizza);
+    // console.log(Object.values(pizza));
+    console.log(displayPizzaOrder(pizza));
 
     // $("#pizza-order").html(pizza);
   });
