@@ -32,7 +32,7 @@ _Create a website for a pizza company where a user can choose one or more indivi
 
 ## Link to website hosted on gh-pages
 
-_[Check out the website](https://ftolentino.github.io/)_
+_[Check out the website](https://ftolentino.github.io/pizza-parlor/)_
 
 
 ## Known Bugs
