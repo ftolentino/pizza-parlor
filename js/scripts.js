@@ -1,7 +1,7 @@
 // Business Logic
 // Pizza Constructor Blueprint
-function Pizza(size) {
-  this.size = size;
+function Pizza() {
+  this.size = 0;
   this.toppings = {};
 }
 
@@ -10,7 +10,6 @@ let pizza = new Pizza();
 Pizza.prototype.selectSize = function () {
   let pizzaSize = $("input[name='size']:checked").val();
   this.size = pizzaSize;
-
 };
 
 Pizza.prototype.selectToppings = function (element) {
@@ -40,7 +39,7 @@ $(document).ready(function () {
     event.preventDefault();
     pizza.selectSize();
     pizza.selectToppings();
-    // console.log(Object.values(pizza));
+  
     console.log(displayPizzaOrder(pizza));
 
     // $("#pizza-order").html(pizza);

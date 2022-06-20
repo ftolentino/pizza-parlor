@@ -41,13 +41,23 @@ N/A
 ## Specs/TDD
 
 ```
-Description Pizza() Constructor Object
+Description: Pizza() Constructor Object
 
 Test: Return a Pizza object with two properties for toppings and size
 Code: const pizzaOrder = new Pizza(["pepperoni", "black olives"], "large");
 Expected Output: Pizza { toppings: ["pepperoni", "black olives"], size: "large" }
 
+Description: selectSize() Pizza prototype
 
+Test: Checks the value of selected size and assigns it to the Pizza constructor size property
+Code: pizza.selectSize();
+Expected Output: size: small, medium, or large
+
+Description: selectToppings() Pizza prototype
+
+Test: Map through each toppings checkbox input and return it's value into an array
+Code: pizza.selectToppings();
+Expected Output: toppings: [...]
 
 ```
 
