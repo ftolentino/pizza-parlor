@@ -4,6 +4,7 @@ function Pizza() {
   this.toppings = {};
   this.sizeCost = 0;
   this.toppingCost = 0;
+  this.totalCost = 0;
 }
 
 let pizza = new Pizza();
@@ -33,18 +34,16 @@ Pizza.prototype.sizePrice = function () {
 Pizza.prototype.toppingPrice = function () {
   let total = this.toppings.length;
   this.toppingCost = total;
-  
+}
+
+Pizza.prototype.sumTotal = function () {
+  this.totalCost = this.sizeCost + this.toppingCost;
 }
 
 
 
 // UI Logic
 function displayPizzaOrder(pizzaOrder) {
-  // Object.keys(pizzaOrder).reduce((accum, currKey) => accum + 
-  // `<div>
-  //   <div>${currKey}</div>
-  //   <div>${pizzaOrder[currKey].toppings}</div>
-  // </div>`,'');
   return pizzaOrder;
 }
 
@@ -55,9 +54,11 @@ $(document).ready(function () {
     pizza.selectToppings();
     pizza.sizePrice();
     pizza.toppingPrice();
+    pizza.sumTotal();
   
     console.log(pizza.toppingCost);
     console.log(pizza.sizeCost);
+    console.log(pizza.totalCost);
     console.log(displayPizzaOrder(pizza));
 
     // $("#pizza-order").html(pizza);

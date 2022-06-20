@@ -73,6 +73,14 @@ toppingPrice()
 pizza.toppingCost
 Expected Output: 1-4, depending on how many toppings you choose. Each topping is worth 1 dollar
 
+Description: sumTotal()
+
+Test: Total cost of pizza size and toppings
+Code:
+pizza.sumTotal();
+pizza.totalCost;
+Expected Output: size price + number of toppings
+
 ```
 
 ## License
