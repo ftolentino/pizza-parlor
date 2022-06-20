@@ -1,0 +1,20 @@
+.label-font {
+  font-size: 1.4em;
+}
+
+.tomato-color {
+  background-color: tomato;
+}
+
+.light-yellow {
+  background-color: bisque;
+}
+
+.jumbotron-bg {
+  background-image: url("/imgs/pizza1.jpg");
+  background-repeat: no-repeat;
+  max-height: 100%;
+  max-width: 100%;
+  margin: 1rem 0;
+  padding: 4rem 2rem;
+}

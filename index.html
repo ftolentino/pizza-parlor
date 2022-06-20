@@ -17,77 +17,88 @@
     <title>Pizza Parlor</title>
     <title></title>
   </head>
-  <body>
+  <body class="light-yellow">
     <div class="container">
-      <div class="jumbotron">
-        <h1>Pizza Parlor</h1>
+      <div class="jumbotron-bg">
+        <h1 class="display-1 text-light text-center">Pizza Parlor</h1>
       </div>
-      <div class="row">
+      <div class="d-flex justify-content-center">
         <div class="col-md-6">
-          <h2>Create Pizza</h2>
-          <form id="pizza-form">
+          <form class="text-center" id="pizza-form">
             <!-- Pizza Size -->
-            <h3>Select Size</h3>
-            <div class="card py-4 px-4 my-4">
-              <div class="radio">
+            <h3 class="text-center">Select Size</h3>
+            <div class="jumbotron tomato-color card py-4 px-4 my-4">
+              <div class="my-3">
                 <input type="radio" name="size" value="small" checked />
-                <label>
+                <label class="mx-2 label-font text-light" for="small">
                   Small 10" $10
                 </label>
               </div>
               <hr />
-              <div class="radio">
+              <div class="my-3">
                 <input type="radio" name="size" value="medium" />
-                <label>
+                <label class="mx-2 label-font text-light" for="medium">
                   Medium 14" $14
                 </label>
               </div>
               <hr />
-              <div class="radio">
+              <div class="my-3">
                 <input type="radio" name="size" value="large" />
-                <label>
+                <label class="mx-2 label-font text-light" for="large">
                   Large 18" $18
                 </label>
               </div>
             </div>
               <!-- Add Toppings -->
-              <h3>Choose Toppings</h3>
-              <div class="card py-4 px-4 my-4">
-                <div class="input-group mb-3">
+              <h3 class="text-center">Choose Toppings</h3>
+              <div class="jumbotron tomato-color card py-4 px-4 my-4">
+                <div class="d-flex align-items-center input-group mb-3 my-3">
+                  <input type="checkbox" name="cheese" value="cheese"  />
+                  <label class="mx-3 label-font text-light" for="cheese">
+                    Cheese $1
+                  </label>
+                </div>
+                <hr />
+                <div class="d-flex align-items-center input-group mb-3 my-3">
                   <input type="checkbox" name="anchovies" value="anchovies"  />
-                  <label for="anchovies">
+                  <label class="mx-3 label-font text-light" for="anchovies">
                     Anchovies $1
                   </label>
                 </div>
                 <hr />
-                <div class="input-group mb-3">
+                <div class="d-flex align-items-center input-group mb-3 my-3">
                   <input type="checkbox" name="pepperoni" value="pepperoni" />
-                  <label>
+                  <label class="mx-3 label-font text-light" for="pepperoni">
                     Pepperoni $1
                   </label>
                 </div>
                 <hr />
-                <div class="input-group mb-3">
+                <div class="d-flex align-items-center input-group mb-3 my-3">
                   <input type="checkbox" name="black-olives" value="black-olives" />
-                  <label>
+                  <label class="mx-3 label-font text-light" for="black-olives">
                     Black Olives $1
                   </label>
                 </div>
                 <hr />
-                <div class="input-group mb-3">
+                <div class="d-flex align-items-center input-group mb-3 my-3">
                   <input type="checkbox" name="mushrooms" value="mushrooms" />
-                  <label>
+                  <label class="mx-3 label-font text-light" for="mushrooms">
                     Mushrooms $1
                   </label>
                 </div>
+                <hr />
+                <div class="d-flex align-items-center input-group mb-3 my-3">
+                  <input type="checkbox" name="jalepeno" value="jalepeno" />
+                  <label class="mx-3 label-font text-light" for="jalepeno">
+                    Jalepeño $1
+                  </label>
+                </div>
             </div>
-
-            <button type="submit" class="btn-primary">Make Pizza</button>
+            <button type="submit" class="btn-danger btn-lg rounded">Make Pizza</button>
           </form>
           <hr />
-          <h2>Your Order Total</h2>
-          <ul id="pizza-order"></ul>
-        
+          <h2 class="text-center">Your Order Total</h2>
+          <div class="display-4 text-center" id="pizza-order"></div>
       </div>
     </div>
   </body>
