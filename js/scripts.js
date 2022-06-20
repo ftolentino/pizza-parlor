@@ -15,36 +15,34 @@ Pizza.prototype.selectSize = function () {
 };
 
 Pizza.prototype.selectToppings = function (element) {
-  element = $('input[type="checkbox"]:checked').map(function() {
+  element = $('input[type="checkbox"]:checked').map(function () {
     return $(this).val();
-  })
+  });
   this.toppings = element;
 };
 
 Pizza.prototype.sizePrice = function () {
-  if (this.size === 'small') {
+  if (this.size === "small") {
     this.sizeCost = 10;
-  } else if (this.size === 'medium') {
+  } else if (this.size === "medium") {
     this.sizeCost = 14;
-  } else if (this.size === 'large') {
+  } else if (this.size === "large") {
     this.sizeCost = 18;
   }
-}
+};
 
 Pizza.prototype.toppingPrice = function () {
   let total = this.toppings.length;
   this.toppingCost = total;
-}
+};
 
 Pizza.prototype.sumTotal = function () {
   this.totalCost = this.sizeCost + this.toppingCost;
-}
-
-
+};
 
 // UI Logic
 function displayTotalCost() {
-  return `$${ pizza.totalCost }`
+  return `$${pizza.totalCost}`;
 }
 
 $(document).ready(function () {
@@ -55,7 +53,7 @@ $(document).ready(function () {
     pizza.sizePrice();
     pizza.toppingPrice();
     pizza.sumTotal();
-  
+
     $("#pizza-order").html(displayTotalCost);
   });
 });
