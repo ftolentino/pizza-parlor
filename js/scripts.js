@@ -43,8 +43,8 @@ Pizza.prototype.sumTotal = function () {
 
 
 // UI Logic
-function displayPizzaOrder(pizzaOrder) {
-  return pizzaOrder;
+function displayTotalCost() {
+  return `$${ pizza.totalCost }`
 }
 
 $(document).ready(function () {
@@ -56,11 +56,6 @@ $(document).ready(function () {
     pizza.toppingPrice();
     pizza.sumTotal();
   
-    console.log(pizza.toppingCost);
-    console.log(pizza.sizeCost);
-    console.log(pizza.totalCost);
-    console.log(displayPizzaOrder(pizza));
-
-    // $("#pizza-order").html(pizza);
+    $("#pizza-order").html(displayTotalCost);
   });
 });
