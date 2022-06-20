@@ -1,8 +1,8 @@
 // Business Logic
-// Pizza Constructor Blueprint
 function Pizza() {
   this.size = 0;
   this.toppings = {};
+  this.sizeCost = 0;
 }
 
 let pizza = new Pizza();
@@ -18,6 +18,16 @@ Pizza.prototype.selectToppings = function (element) {
   })
   this.toppings = element;
 };
+
+Pizza.prototype.sizePrice = function () {
+  if (this.size === 'small') {
+    this.sizeCost = 10;
+  } else if (this.size === 'medium') {
+    this.sizeCost = 14;
+  } else if (this.size === 'large') {
+    this.sizeCost = 18;
+  }
+}
 
 
 
@@ -39,7 +49,9 @@ $(document).ready(function () {
     event.preventDefault();
     pizza.selectSize();
     pizza.selectToppings();
+    pizza.sizePrice();
   
+    console.log(pizza.sizeCost);
     console.log(displayPizzaOrder(pizza));
 
     // $("#pizza-order").html(pizza);

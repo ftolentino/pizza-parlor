@@ -59,6 +59,12 @@ Test: Map through each toppings checkbox input and return it's value into an arr
 Code: pizza.selectToppings();
 Expected Output: toppings: [...]
 
+Description: sizePrice()
+
+Test: Assign a price based on pizza selection price
+Code: pizza.sizePrice();
+Expected Output: 10, 14, 18
+
 ```
 
 ## License
