@@ -65,6 +65,14 @@ Test: Assign a price based on pizza selection price
 Code: pizza.sizePrice();
 Expected Output: 10, 14, 18
 
+Description: toppingPrice()
+
+Test: Output the cost of each topping based off the length of the toppings array length
+Code: 
+toppingPrice()
+pizza.toppingCost
+Expected Output: 1-4, depending on how many toppings you choose. Each topping is worth 1 dollar
+
 ```
 
 ## License

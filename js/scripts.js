@@ -3,6 +3,7 @@ function Pizza() {
   this.size = 0;
   this.toppings = {};
   this.sizeCost = 0;
+  this.toppingCost = 0;
 }
 
 let pizza = new Pizza();
@@ -29,6 +30,12 @@ Pizza.prototype.sizePrice = function () {
   }
 }
 
+Pizza.prototype.toppingPrice = function () {
+  let total = this.toppings.length;
+  this.toppingCost = total;
+  
+}
+
 
 
 // UI Logic
@@ -40,9 +47,6 @@ function displayPizzaOrder(pizzaOrder) {
   // </div>`,'');
   return pizzaOrder;
 }
-// const pizzaOrder = Object.keys(pizza).reduce((accum, currKey) => accum + 
-//   `<div
-//   `,'');
 
 $(document).ready(function () {
   $("#pizza-form").submit(function (event) {
@@ -50,7 +54,9 @@ $(document).ready(function () {
     pizza.selectSize();
     pizza.selectToppings();
     pizza.sizePrice();
+    pizza.toppingPrice();
   
+    console.log(pizza.toppingCost);
     console.log(pizza.sizeCost);
     console.log(displayPizzaOrder(pizza));
 
