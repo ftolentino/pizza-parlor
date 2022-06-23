@@ -7,7 +7,6 @@ function Pizza() {
   this.totalCost = 0;
 }
 
-
 Pizza.prototype.selectToppings = function (element) {
   element = $('input[type="checkbox"]:checked').map(function () {
     return $(this).val();
@@ -35,8 +34,6 @@ Pizza.prototype.sumTotal = function () {
 };
 
 // UI Logic
-
-
 $(document).ready(function () {
   $("#pizza-form").submit(function (event) {
     event.preventDefault();
@@ -44,8 +41,6 @@ $(document).ready(function () {
 
     const sizeInput = $("input[name='size']:checked").val();
     pizza.size = sizeInput;
-
-
 
     pizza.selectToppings();
     pizza.sizePrice();
