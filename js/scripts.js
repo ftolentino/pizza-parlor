@@ -7,12 +7,6 @@ function Pizza() {
   this.totalCost = 0;
 }
 
-let pizza = new Pizza();
-
-Pizza.prototype.selectSize = function () {
-  let pizzaSize = $("input[name='size']:checked").val();
-  this.size = pizzaSize;
-};
 
 Pizza.prototype.selectToppings = function (element) {
   element = $('input[type="checkbox"]:checked').map(function () {
@@ -41,19 +35,23 @@ Pizza.prototype.sumTotal = function () {
 };
 
 // UI Logic
-function displayTotalCost() {
-  return `$${pizza.totalCost}`;
-}
+
 
 $(document).ready(function () {
   $("#pizza-form").submit(function (event) {
     event.preventDefault();
-    pizza.selectSize();
+    let pizza = new Pizza();
+
+    const sizeInput = $("input[name='size']:checked").val();
+    pizza.size = sizeInput;
+
+
+
     pizza.selectToppings();
     pizza.sizePrice();
     pizza.toppingPrice();
     pizza.sumTotal();
 
-    $("#pizza-order").html(displayTotalCost);
+    $("#pizza-order").html(`$${pizza.totalCost}`);
   });
 });
